@@ -1,4 +1,4 @@
-# Brainrex.CandleResponse
+# Codabl.CandleResponse
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Brainrex.SupportedExchanges
+# Codabl.SupportedExchanges
 
 ## Properties
 Name | Type | Description | Notes

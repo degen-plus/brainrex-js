@@ -1,4 +1,4 @@
-# Brainrex.ExchangeAssetsResponse
+# Codabl.ExchangeAssetsResponse
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Brainrex.OrderbookRequest
+# Codabl.OrderbookRequest
 
 ## Properties
 Name | Type | Description | Notes

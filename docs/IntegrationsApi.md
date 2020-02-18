@@ -1,13 +1,13 @@
-# Brainrex.IntegrationsApi
+# Codabl.IntegrationsApi
 
 All URIs are relative to *https://api.bitlongs.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**cryptoGetCandleData**](IntegrationsApi.md#cryptoGetCandleData) | **POST** /crypto/get_candles | Downloads candle format market data
-[**cryptoGetExchangeAssets**](IntegrationsApi.md#cryptoGetExchangeAssets) | **POST** /crypto/get_exchange_assets | Gets all currency pairs traded in selected exchange
-[**cryptoGetOrderbooks**](IntegrationsApi.md#cryptoGetOrderbooks) | **POST** /crypto/get_orderbooks | Downloads candle format market data
-[**cryptoGetSupportedExchanges**](IntegrationsApi.md#cryptoGetSupportedExchanges) | **GET** /crypto/get_supported_exchanges | Gets all cryptocurrency exchanges supported by the Brainrex API
+[**cryptoGetExchangeAssets**](IntegrationsApi.md#cryptoGetExchangeAssets) | **POST** /crypto/get_exchange_assets | Gets all coin pairs traded in specified exchange
+[**cryptoGetOrderbooks**](IntegrationsApi.md#cryptoGetOrderbooks) | **POST** /crypto/get_orderbooks | Returns the current state of the orderbook.
+[**cryptoGetSupportedExchanges**](IntegrationsApi.md#cryptoGetSupportedExchanges) | **GET** /crypto/get_supported_exchanges | Gets all cryptocurrency exchanges supported by the Codabl API
 [**cryptoGetTicker**](IntegrationsApi.md#cryptoGetTicker) | **POST** /crypto/get_ticker | Downloads candle format market data
 
 
@@ -21,8 +21,8 @@ Returns a list of candle data from specified market and data range
 
 ### Example
 ```javascript
-var Brainrex = require('brainrex');
-var defaultClient = Brainrex.ApiClient.instance;
+var Codabl = require('codabl');
+var defaultClient = Codabl.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
 var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
@@ -30,9 +30,9 @@ APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-var apiInstance = new Brainrex.IntegrationsApi();
+var apiInstance = new Codabl.IntegrationsApi();
 
-var candleRequest = new Brainrex.CandleRequest(); // CandleRequest | The Get candles end point return market data in Open High Close Volume format. In order to use this endpoint you need to enter your API keys to your data provider in the console
+var candleRequest = new Codabl.CandleRequest(); // CandleRequest | The Get candles end point return market data in Open High Close Volume format. In order to use this endpoint you need to enter your API keys to your data provider in the console
 
 
 var callback = function(error, data, response) {
@@ -68,14 +68,14 @@ Name | Type | Description  | Notes
 # **cryptoGetExchangeAssets**
 > ExchangeAssetsResponse cryptoGetExchangeAssets(exchange)
 
-Gets all currency pairs traded in selected exchange
+Gets all coin pairs traded in specified exchange
 
-Returns a list of candle data from specified market and data range
+This endpoint returns all the Available currency pairs
 
 ### Example
 ```javascript
-var Brainrex = require('brainrex');
-var defaultClient = Brainrex.ApiClient.instance;
+var Codabl = require('codabl');
+var defaultClient = Codabl.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
 var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
@@ -83,9 +83,9 @@ APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-var apiInstance = new Brainrex.IntegrationsApi();
+var apiInstance = new Codabl.IntegrationsApi();
 
-var exchange = new Brainrex.Exchange(); // Exchange | Name of the cryptocurrency exchange
+var exchange = new Codabl.Exchange(); // Exchange | Name of the cryptocurrency exchange
 
 
 var callback = function(error, data, response) {
@@ -121,14 +121,14 @@ Name | Type | Description  | Notes
 # **cryptoGetOrderbooks**
 > OrderbookResponse cryptoGetOrderbooks(orderbookRequest)
 
-Downloads candle format market data
+Returns the current state of the orderbook.
 
-Returns a list of candle data from specified market and data range
+This endpoint returns the current state of the ordebook with a limit set by you. The maximun orderbook depth is 25.
 
 ### Example
 ```javascript
-var Brainrex = require('brainrex');
-var defaultClient = Brainrex.ApiClient.instance;
+var Codabl = require('codabl');
+var defaultClient = Codabl.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
 var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
@@ -136,9 +136,9 @@ APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-var apiInstance = new Brainrex.IntegrationsApi();
+var apiInstance = new Codabl.IntegrationsApi();
 
-var orderbookRequest = new Brainrex.OrderbookRequest(); // OrderbookRequest | Exchange, trading pair and date rage for data
+var orderbookRequest = new Codabl.OrderbookRequest(); // OrderbookRequest | Exchange, trading pair and date rage for data
 
 
 var callback = function(error, data, response) {
@@ -174,14 +174,14 @@ Name | Type | Description  | Notes
 # **cryptoGetSupportedExchanges**
 > SupportedExchanges cryptoGetSupportedExchanges()
 
-Gets all cryptocurrency exchanges supported by the Brainrex API
+Gets all cryptocurrency exchanges supported by the Codabl API
 
 Returns a list of candle data from specified market and data range
 
 ### Example
 ```javascript
-var Brainrex = require('brainrex');
-var defaultClient = Brainrex.ApiClient.instance;
+var Codabl = require('codabl');
+var defaultClient = Codabl.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
 var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
@@ -189,7 +189,7 @@ APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-var apiInstance = new Brainrex.IntegrationsApi();
+var apiInstance = new Codabl.IntegrationsApi();
 
 var callback = function(error, data, response) {
   if (error) {
@@ -227,8 +227,8 @@ Returns a list of candle data from specified market and data range
 
 ### Example
 ```javascript
-var Brainrex = require('brainrex');
-var defaultClient = Brainrex.ApiClient.instance;
+var Codabl = require('codabl');
+var defaultClient = Codabl.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
 var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
@@ -236,9 +236,9 @@ APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-var apiInstance = new Brainrex.IntegrationsApi();
+var apiInstance = new Codabl.IntegrationsApi();
 
-var exchange = new Brainrex.Exchange(); // Exchange | Get ticker data from specified crypto exchange
+var exchange = new Codabl.Exchange(); // Exchange | Get ticker data from specified crypto exchange
 
 
 var callback = function(error, data, response) {

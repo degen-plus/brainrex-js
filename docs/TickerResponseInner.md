@@ -1,4 +1,4 @@
-# Brainrex.TickerResponseInner
+# Codabl.TickerResponseInner
 
 ## Properties
 Name | Type | Description | Notes

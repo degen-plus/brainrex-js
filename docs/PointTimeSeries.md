@@ -1,4 +1,4 @@
-# Brainrex.PointTimeSeries
+# Codabl.PointTimeSeries
 
 ## Properties
 Name | Type | Description | Notes

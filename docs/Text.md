@@ -1,4 +1,4 @@
-# Brainrex.Text
+# Codabl.Text
 
 ## Properties
 Name | Type | Description | Notes

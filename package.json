@@ -1,8 +1,8 @@
 {
-  "name": "brainrex",
-  "version": "1.0.0",
-  "description": "Client Library for the Brainrex API. This API provides anomaly detection, language understanding and data integrations to the blockchain development community.",
-  "license": "MIT",
+  "name": "codabl",
+  "version": "0.1.0",
+  "description": "Client library for the Codabl Community API",
+  "license": "Unlicense",
   "main": "src/index.js",
   "scripts": {
     "test": "mocha --recursive"

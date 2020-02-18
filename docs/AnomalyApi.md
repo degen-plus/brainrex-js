@@ -1,4 +1,4 @@
-# Brainrex.AnomalyApi
+# Codabl.AnomalyApi
 
 All URIs are relative to *https://api.bitlongs.com*
 
@@ -17,8 +17,8 @@ The Anomaly Detect endpoint ingests time series data of all types, then monitors
 
 ### Example
 ```javascript
-var Brainrex = require('brainrex');
-var defaultClient = Brainrex.ApiClient.instance;
+var Codabl = require('codabl');
+var defaultClient = Codabl.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
 var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
@@ -26,10 +26,10 @@ APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-var apiInstance = new Brainrex.AnomalyApi();
+var apiInstance = new Codabl.AnomalyApi();
 
 var opts = { 
-  'request': new Brainrex.TimeSeries() // TimeSeries | Time Series to be analyzed, with the following format.
+  'request': new Codabl.TimeSeries() // TimeSeries | Time Series to be analyzed, with the following format.
 };
 
 var callback = function(error, data, response) {

@@ -1,4 +1,4 @@
-# Brainrex.Error
+# Codabl.Error
 
 ## Properties
 Name | Type | Description | Notes
