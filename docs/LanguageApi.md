@@ -1,6 +1,6 @@
-# Codabl.LanguageApi
+# BrainRexApi.LanguageApi
 
-All URIs are relative to *https://api.bitlongs.com*
+All URIs are relative to *https://api.brainrex.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -8,46 +8,42 @@ Method | HTTP request | Description
 [**languageGetGeneralSentiment**](LanguageApi.md#languageGetGeneralSentiment) | **POST** /sentiment/get_general_sentiment | Returns a -1 to 1 score, depending on positive/negative sentiment
 [**languageGetPriceSentiment**](LanguageApi.md#languageGetPriceSentiment) | **POST** /language/get_price_sentiment | Sentiment analysis score using a model trained for buy signals.
 
-
 <a name="languageGetCryptoEntities"></a>
 # **languageGetCryptoEntities**
-> languageGetCryptoEntities(text)
+> languageGetCryptoEntities(body)
 
 Extracts known crypto entities like coin names, exchanges, media from text.
 
-The Crypto Entities endpoint ingests written MIT Digital Currency Initiative Paper A paper describing how our sentiment and entity analyzer are built. And how the can be used for trading several cryptocurrencies successfully  We prove that using sentiment only as a input to a trading algorithm can be profitable. If combined with other machine learning models. We descri This Paper could be published in MIT Crypto Economics Journal . . <br><br> Our AI selects from several models, choosing the one that fits the given data best, and we give you the avality to customize the sensitivy of the model. Our model has been trained to recognize anomalies in popular blockchain networks e.g. Bitcoin, Ethereum, learning from past events.
+The Crypto Entities endpoint ingests written MIT Digital Currency Initiative Paper A paper describing how our sentiment and entity analyzer are built. And how the can be used for trading several cryptocurrencies successfully  We prove that using sentiment only as a input to a trading algorithm can be profitable. If combined with other machine learning models. We descri This Paper could be published in MIT Crypto Economics Journal . . &lt;br&gt;&lt;br&gt; Our AI selects from several models, choosing the one that fits the given data best, and we give you the avality to customize the sensitivy of the model. Our model has been trained to recognize anomalies in popular blockchain networks e.g. Bitcoin, Ethereum, learning from past events.
 
 ### Example
 ```javascript
-var Codabl = require('codabl');
-var defaultClient = Codabl.ApiClient.instance;
+import {BrainRexApi} from 'brain_rex_api';
+let defaultClient = BrainRexApi.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
-var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-var apiInstance = new Codabl.LanguageApi();
+let apiInstance = new BrainRexApi.LanguageApi();
+let body = new BrainRexApi.Text(); // Text | String of text to be analyze for investor sentiment.
 
-var text = new Codabl.Text(); // Text | String of text to be analyze for investor sentiment.
-
-
-var callback = function(error, data, response) {
+apiInstance.languageGetCryptoEntities(body, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully.');
   }
-};
-apiInstance.languageGetCryptoEntities(text, callback);
+});
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **text** | [**Text**](Text.md)| String of text to be analyze for investor sentiment. | 
+ **body** | [**Text**](Text.md)| String of text to be analyze for investor sentiment. | 
 
 ### Return type
 
@@ -60,11 +56,11 @@ null (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: Not defined
 
 <a name="languageGetGeneralSentiment"></a>
 # **languageGetGeneralSentiment**
-> 'String' languageGetGeneralSentiment(text)
+> &#x27;String&#x27; languageGetGeneralSentiment(body)
 
 Returns a -1 to 1 score, depending on positive/negative sentiment
 
@@ -72,39 +68,36 @@ This endpoints returns a score from -1 to +1 where depending on negative or posi
 
 ### Example
 ```javascript
-var Codabl = require('codabl');
-var defaultClient = Codabl.ApiClient.instance;
+import {BrainRexApi} from 'brain_rex_api';
+let defaultClient = BrainRexApi.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
-var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-var apiInstance = new Codabl.LanguageApi();
+let apiInstance = new BrainRexApi.LanguageApi();
+let body = new BrainRexApi.Text(); // Text | String of text to be analyze for general sentiment.
 
-var text = new Codabl.Text(); // Text | String of text to be analyze for general sentiment.
-
-
-var callback = function(error, data, response) {
+apiInstance.languageGetGeneralSentiment(body, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.languageGetGeneralSentiment(text, callback);
+});
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **text** | [**Text**](Text.md)| String of text to be analyze for general sentiment. | 
+ **body** | [**Text**](Text.md)| String of text to be analyze for general sentiment. | 
 
 ### Return type
 
-**'String'**
+**&#x27;String&#x27;**
 
 ### Authorization
 
@@ -117,7 +110,7 @@ Name | Type | Description  | Notes
 
 <a name="languageGetPriceSentiment"></a>
 # **languageGetPriceSentiment**
-> 'String' languageGetPriceSentiment(text)
+> &#x27;String&#x27; languageGetPriceSentiment(body)
 
 Sentiment analysis score using a model trained for buy signals.
 
@@ -125,39 +118,36 @@ Gives a 0 to 1 score, depending on buy/sell sentiment
 
 ### Example
 ```javascript
-var Codabl = require('codabl');
-var defaultClient = Codabl.ApiClient.instance;
+import {BrainRexApi} from 'brain_rex_api';
+let defaultClient = BrainRexApi.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
-var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-var apiInstance = new Codabl.LanguageApi();
+let apiInstance = new BrainRexApi.LanguageApi();
+let body = new BrainRexApi.Text(); // Text | String of text to be analyze for investor sentiment.
 
-var text = new Codabl.Text(); // Text | String of text to be analyze for investor sentiment.
-
-
-var callback = function(error, data, response) {
+apiInstance.languageGetPriceSentiment(body, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.languageGetPriceSentiment(text, callback);
+});
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **text** | [**Text**](Text.md)| String of text to be analyze for investor sentiment. | 
+ **body** | [**Text**](Text.md)| String of text to be analyze for investor sentiment. | 
 
 ### Return type
 
-**'String'**
+**&#x27;String&#x27;**
 
 ### Authorization
 

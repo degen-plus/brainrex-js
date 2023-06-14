@@ -1,4 +1,4 @@
-# Codabl.OHCLV
+# BrainRexApi.OHCLV
 
 ## Properties
 Name | Type | Description | Notes
@@ -12,5 +12,3 @@ Name | Type | Description | Notes
 **usdVolume** | **Number** | Volume of currency exchanged in dollars the time frame with two decimal points | [optional] 
 **btcVolume** | **Number** | Volume of currency exchanged in dollars the time frame with two decimal points | [optional] 
 **quoteVolume** | **Number** | Volume of currency exchanged in dollars the time frame with two decimal points | [optional] 
-
-

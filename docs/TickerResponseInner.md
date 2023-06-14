@@ -1,4 +1,4 @@
-# Codabl.TickerResponseInner
+# BrainRexApi.TickerResponseInner
 
 ## Properties
 Name | Type | Description | Notes
@@ -9,5 +9,3 @@ Name | Type | Description | Notes
 **priceBtc** | **Number** | Opening price quote of the time frame with two decimal points | [optional] 
 **priceUsd** | **Number** | Timestamp of the beggining of the frame | [optional] 
 **symbol** | **String** | Volume of currency exchanged in the time frame with two decimal points | [optional] 
-
-

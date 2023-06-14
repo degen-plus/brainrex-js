@@ -1,4 +1,4 @@
-# Codabl.Error
+# BrainRexApi.Error
 
 ## Properties
 Name | Type | Description | Notes
@@ -6,5 +6,3 @@ Name | Type | Description | Notes
 **code** | **Number** |  | [optional] 
 **message** | **String** |  | [optional] 
 **fields** | **String** |  | [optional] 
-
-
